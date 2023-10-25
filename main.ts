@@ -1,16 +1,16 @@
-/* Copyright (c) 2020 MTHS All rights reserved
+/* Copyright (c) 2023 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
+ * Created by: Clara
+ * Created on: Oct 2023
  * This program compares 2 random numbers from 0-99.
 */
-
-basic.clearScreen()
-basic.showIcon(IconNames.Happy)
 
 // variables
 const firstNumber: number = randint(0, 99)
 const secondNumber: number = randint(0, 99)
+
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
 
 // show 1st number
 input.onButtonPressed(Button.A, function () {
@@ -29,8 +29,8 @@ input.onGesture(Gesture.Shake, function () {
   basic.clearScreen()
   if (firstNumber < secondNumber) {
     basic.showString(firstNumber.toString() + '<' + secondNumber.toString())
-    } else {
-        basic.showString(firstNumber.toString() + '>' + secondNumber.toString())
-    }
-    basic.showIcon(IconNames.Sad)
+  } else {
+    basic.showString(firstNumber.toString() + '>' + secondNumber.toString())
+  }
+  basic.showIcon(IconNames.Sad)
 })
